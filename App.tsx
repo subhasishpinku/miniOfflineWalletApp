@@ -101,3 +101,4 @@ export default function App() {
     </GlobalErrorBoundary>
   );
 }
+//react-native-safe-area-context

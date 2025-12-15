@@ -25,13 +25,13 @@ export default function LoginScreen({ onLoginSuccess }: any) {
     try {
       setLoading(true);
 
-      // 1️⃣ Call mock API
+      // 1 Call mock API
       const response = await mockLoginApi(username, password);
 
-      // 2️⃣ Store token securely (NOT AsyncStorage)
+      // Store token securely (NOT AsyncStorage)
       await saveAuth(response.token, response.expiresAt);
 
-      // 3️⃣ Notify app login success
+      //  Notify app login success
       onLoginSuccess();
 
     } catch (e: any) {
